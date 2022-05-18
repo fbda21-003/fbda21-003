@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BRIAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- Owl Carousel css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+  <!-- Owl Carousel css-->
+
+
+  <!-- jquery css-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!-- jquery css-->
+
+</head>
+
+<body>
+  <section class="home">
+    <div class="headerbg ">
+      <header>
+        <div class="container ">
+          <div class="navbar flex1">
+            <div class="logo">
+              <img src="image/logo.png" alt="">
+            </div>
+
+            <nav>
+              <ul id="menuitem">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="adventure.html">ADVENTURE</a></li>
+                <li><a href="horror.html">HORROR</a></li>
+                <li><a href="comedy.html">COMEDY</a></li>
+              </ul>
+            </nav>
+            <span class="fa fa-bars" onclick="menutoggle()"></span>
+
+          </div>
+        </div>
+      </header>
+
+      <div class="home_content mtop">
+        <div class="container">
+          <div class="left">
+            <h1>ACTION MOVIES</h1>
+            <p>I am Legend. "The last man on Earth is not alone."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    var menuitem = document.getElementById("menuitem");
+    menuitem.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menuitem.style.maxHeight == '0px') {
+        menuitem.style.maxHeight = "200px"
+      } else {
+        menuitem.style.maxHeight = "0px"
+      }
+    }
+
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 50);
+    })
+  </script>
+
+
+
+  <section class="popular mtop" id="movies">
+    <div class="container ">
+      <div class="heading flex1">
+        <h2>MOVIES</h2>
+        <button>LOAD MORE</button>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <img src="image/ninjashadowofatear.jfif" alt="">
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="content">
+              <i id="palybtn" class="fas fa-play"></i>
+            </div>
+            <div class="text">
+              <h3>NINJA SHADOW OF A TEAR</h3>
+              <div class="time flex">
+                <span>SHOWING 22 SEPTEMBER 2022</span>
+                <i class="fas fa-circle"></i>
+                <span>20:00HRS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <img src="image/WRATHOFAMAN.jfif" alt="">
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="content">
+              <i id="palybtn" class="fas fa-play"></i>
+            </div>
+            <div class="text">
+              <h3>WRATH OF A MAN</h3>
+              <div class="time flex">
+                <span>SHOWING 23 SEPTEMBER 2022</span>
+                <i class="fas fa-circle"></i>
+                <span>20:00HRS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <img src="image/doctor.jfif" alt="">
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="content">
+              <i id="palybtn" class="fas fa-play"></i>
+            </div>
+            <div class="text">
+              <h3>DOCTOR</h3>
+              <div class="time flex">
+                <span>SHOWING 24 MAY 2022</span>
+                <i class="fas fa-circle"></i>
+                <span>20:00HRS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <img src="image/infinite.jfif" alt="">
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="content">
+              <i id="palybtn" class="fas fa-play"></i>
+            </div>
+            <div class="text">
+              <h3>INFINITE</h3>
+              <div class="time flex">
+                <span>SHOWING 25 MAY 2022</span>
+                <i class="fas fa-circle"></i>
+                <span>20:00HRS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <img src="image/nobody.jfif" alt="">
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="content">
+              <i id="palybtn" class="fas fa-play"></i>
+            </div>
+            <div class="text">
+              <h3>NOBODY</h3>
+              <div class="time flex">
+                <span>SHOWING 27 MAY 2022</span>
+                <i class="fas fa-circle"></i>
+                <span>20:00HRS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="box">
+            <div class="imgBox">
+              <img src="image/choosedie.jfif" alt="">
+              <div class="icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+
+            <div class="content">
+              <i id="palybtn" class="fas fa-play"></i>
+            </div>
+            <div class="text">
+              <h3>CHOOSE OR DIE</h3>
+              <div class="time flex">
+                <span>SHOWING 29 MAY 2022</span>
+                <i class="fas fa-circle"></i>
+                <span>20:00HRS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  <!-- Owl Carousel -->
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      responsive: {
+        411: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
