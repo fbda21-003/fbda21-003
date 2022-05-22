@@ -1,263 +1,354 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>BRIAN</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <!-- Owl Carousel css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
-  <!-- Owl Carousel css-->
+  <title>BABUSI MOVIES</title>
 
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./icon.jfif" type="image/svg+xml">
 
-  <!-- jquery css-->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <!-- jquery css-->
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <section class="home">
-    <div class="headerbg ">
-      <header>
-        <div class="container ">
-          <div class="navbar flex1">
-            <div class="logo">
-              <img src="image/logo.png" alt="">
-            </div>
+<body id="top">
 
-            <nav>
-              <ul id="menuitem">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="adventure.html">ACTION</a></li>
-                <li><a href="horror.html">HORROR</a></li>
-                <li><a href="comedy.html">COMEDY</a></li>
-              </ul>
-            </nav>
-            <span class="fa fa-bars" onclick="menutoggle()"></span>
+  <!-- 
+    - #HEADER
+  -->
 
-          </div>
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <div class="header-actions">
+
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <div class="lang-wrapper">
+          <label for="language">
+            <ion-icon name="globe-outline"></ion-icon>
+          </label>
+
         </div>
-      </header>
 
-      <div class="home_content mtop">
-        <div class="container">
-          <div class="left">
-            <h1>ADVENTURE MOVIES</h1>
-            <p>“If you live an ordinary life, all you'll have are ordinary stories. You have to live a life of adventure.”</p>
-          </div>
-        </div>
       </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+            <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="adventure.html" class="navbar-link">ADVENTURE</a>
+          </li>
+
+          <li>
+            <a href="action.html" class="navbar-link">ACTION</a>
+          </li>
+
+          <li>
+            <a href="horror.html" class="navbar-link">HORROR</a>
+          </li>
+
+          <li>
+            <a href="comedy.html" class="navbar-link">COMEDY</a>
+          </li>
+
+
+        </ul>
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
     </div>
-  </section>
-
-
-  <script>
-    var menuitem = document.getElementById("menuitem");
-    menuitem.style.maxHeight = "0px";
-
-    function menutoggle() {
-      if (menuitem.style.maxHeight == '0px') {
-        menuitem.style.maxHeight = "200px"
-      } else {
-        menuitem.style.maxHeight = "0px"
-      }
-    }
-
-    window.addEventListener("scroll", function() {
-      var header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 50);
-    })
-  </script>
+  </header>
 
 
 
-  <section class="popular mtop" id="movies">
-    <div class="container ">
-      <div class="heading flex1">
-        <h2>MOVIES</h2>
-        <button>LOAD MORE</button>
-      </div>
 
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/ninjashadowofatear.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #UPCOMING
+      -->
+
+      <section class="upcoming" id="movie">
+        <div class="container">
+
+          <div class="flex-wrapper">
+
+            <div class="title-wrapper">
+
+              <h2 class="h2 section-title">ADVENTURE MOVIES</h2>
             </div>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>NINJA SHADOW OF A TEAR</h3>
-              <div class="time flex">
-                <span>SHOWING 22 SEPTEMBER 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
           </div>
+
+          <ul class="movies-list  has-scrollbar">
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/lost.jpg" alt="the LOST CITY">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">THE LOST CITY</h3>
+                  </a>
+
+                  <time datetime="2022">09/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">137 min</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">20:00hrs</time>
+                  </div>
+                  <div class="duration">
+                    <time datetime="PT137M">$19.70</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>8.5</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/uncharted.jpg"
+                      alt="uncharted">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">UNCHARTED</h3>
+                  </a>
+
+                  <time datetime="2022">10/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">4K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT126M">126 min</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">20:00hrs</time>
+                  </div>
+                  <div class="duration">
+                    <time datetime="PT137M">$10.70</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>NR</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/moonfall.jfif" alt="MOONFALL">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">MOONFALL</h3>
+                  </a>
+
+                  <time datetime="2022">11/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">2K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="">N/A</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">20:00hrs</time>
+                  </div>
+                  <div class="duration">
+                    <time datetime="PT137M">$12.70</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>NR</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/upcoming-4.png"
+                      alt="The Unbearable Weight of Massive Talent movie poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">The Unbearable Weight of Massive Talent</h3>
+                  </a>
+
+                  <time datetime="2022">12/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT107M">107 min</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">20:00hrs</time>
+                  </div>
+                  <div class="duration">
+                    <time datetime="PT137M">$21.70</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>NR</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
         </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/WRATHOFAMAN.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+      </section>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>WRATH OF A MAN</h3>
-              <div class="time flex">
-                <span>SHOWING 23 SEPTEMBER 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/doctor.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+      <!-- 
+        - #TOP RATED
+      -->
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>DOCTOR</h3>
-              <div class="time flex">
-                <span>SHOWING 24 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/infinite.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+     
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>INFINITE</h3>
-              <div class="time flex">
-                <span>SHOWING 25 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/nobody.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+ 
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>NOBODY</h3>
-              <div class="time flex">
-                <span>SHOWING 27 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/choosedie.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+    </article>
+  </main>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>CHOOSE OR DIE</h3>
-              <div class="time flex">
-                <span>SHOWING 29 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  </section>
 
-  
-  <!-- Owl Carousel -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-  <!-- Owl Carousel -->
 
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: true,
-      dots: false,
-      responsive: {
-        411: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    })
-  </script>
 </body>
 
 </html>

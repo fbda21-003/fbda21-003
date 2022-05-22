@@ -1,598 +1,912 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>BRIAN MOVIES</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <!-- Owl Carousel css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
-  <!-- Owl Carousel css-->
+  <title>BABUSI MOVIES</title>
 
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./icon.jfif" type="image/svg+xml">
 
-  <!-- jquery css-->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <!-- jquery css-->
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <section class="home">
-    <div class="headerbg ">
-      <header>
-        <div class="container ">
-          <div class="navbar flex1">
-            <div class="logo">
-              <img src="image/logo.png" alt="">
-            </div>
+<body id="top">
 
-            <nav>
-              <ul id="menuitem">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#movies">Movies</a></li>
-                <li><a href="#category">Category</a></li>
-                <li><a href="#upcoming">Upcoming</a></li>
-                <li><a href="#contact">Contacts</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-              </ul>
-            </nav>
-            <span class="fa fa-bars" onclick="menutoggle()"></span>
+  <!-- 
+    - #HEADER
+  -->
 
-            <div class="subscribe flex">
-              <i class="fas fa-search"></i>
-              <button>LOG IN</button>
-            </div>
-          </div>
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="./icon.jfif" alt="logo">
+      </a>
+
+      <div class="header-actions">
+
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <div class="lang-wrapper">
+          <label for="language">
+            <ion-icon name="globe-outline"></ion-icon>
+          </label>
+
+          <select name="language" id="language">
+            <option value="en">EN</option>
+            <option value="au">AU</option>
+            <option value="ar">AR</option>
+            <option value="tu">TU</option>
+          </select>
         </div>
-      </header>
 
-      <div class="home_content mtop">
+        <button class="btn btn-primary">Sign in</button>
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="./icon.jfif" alt="logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#movie" class="navbar-link">MovieS</a>
+          </li>
+
+          <li>
+            <a href="#category" class="navbar-link">CATEGORY</a>
+          </li>
+
+          <li>
+            <a href="#upcoming" class="navbar-link">UPCOMING</a>
+          </li>
+
+          <li>
+            <a href="#feedback" class="navbar-link">FEEDBACK</a>
+          </li>
+
+           <li>
+            <a href="#contact" class="navbar-link">CONTACT</a>
+          </li>
+
+        </ul>
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero">
         <div class="container">
-          <div class="left">
-            <h1>BRIAN MOVIES</h1>
-            <p>DONT JUDGE WITHOUT WATCHING</p>
-            <i class="fa fa-location"><h2>MAUN</h2></i>
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">BABUSI MOVIES</p>
+
+            <h1 class="h1 hero-title">
+              FRANCI<strong>STOWN</strong>
+            </h1>
+            <h3>YOUR POINT AND YOUR FULFILLMENT</h3>
+
+            
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
-      </div>
-    </div>
-  </section>
-
-
-  <script>
-    var menuitem = document.getElementById("menuitem");
-    menuitem.style.maxHeight = "0px";
-
-    function menutoggle() {
-      if (menuitem.style.maxHeight == '0px') {
-        menuitem.style.maxHeight = "200px"
-      } else {
-        menuitem.style.maxHeight = "0px"
-      }
-    }
-
-    window.addEventListener("scroll", function() {
-      var header = document.querySelector("header");
-      header.classList.toggle("sticky", window.scrollY > 50);
-    })
-  </script>
+      </section>
 
 
 
-  <section class="popular mtop" id="movies">
-    <div class="container ">
-      <div class="heading flex1">
-        <h2>MOVIES</h2>
-        <button>LOAD MORE</button>
-      </div>
 
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/injustice.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
+
+      <!-- 
+        - #UPCOMING
+      -->
+
+      <section class="upcoming" id="movie">
+        <div class="container">
+
+          <div class="flex-wrapper">
+
+            <div class="title-wrapper">
+
+              <h2 class="h2 section-title">MOVIES</h2>
             </div>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>INJUSTICE</h3>
-              <div class="time flex">
-                <span>SHOWING 22 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
           </div>
+
+          <ul class="movies-list  has-scrollbar">
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/upcoming-1.png" alt="legend of ten rings">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Shang-Chi and The Legend of The Ten Rings</h3>
+                  </a>
+
+                  <time datetime="2022">01/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">137 min</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">18:00hrs</time>
+                  </div>
+                  <div class="duration">
+                    <time datetime="PT137M">$25.00</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>8.5</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/upcoming-2.png"
+                      alt="CR7 THE MOVIE">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Cristiano Ronaldo: The Movie</h3>
+                  </a>
+
+                  <time datetime="2022">01/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">4K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT126M">126 min</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">20:00hrs</time>
+                  </div>
+                  <div class="duration">
+                    <time datetime="PT137M">$30.00</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>NR</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/upcoming-3.png" alt="memory">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Memory</h3>
+                  </a>
+
+                  <time datetime="2022">02/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">2K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="">N/A</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">20:00hrs</time>
+                  </div>
+                  <div class="duration">
+                    <time datetime="PT137M">$13.45</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>NR</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/upcoming-4.png"
+                      alt="unity of heroes">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">UNITY OF HEROES</h3>
+                  </a>
+
+                  <time datetime="2022">03/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT107M">107 min</time>
+                  </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">20:00hrs</time>
+                  </div>
+                  <div class="duration">
+                     <time datetime="PT137M">$28.90</time>
+                  </div>
+
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>NR</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
         </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/vivo.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
+      </section>
+
+      <!-- 
+        - #TOP RATED
+      -->
+
+      <section class="top-rated" id="category">
+        <div class="container">
+
+          <p class="section-subtitle"></p>
+
+          <h2 class="h2 section-title">CATEGORIES</h2>
+
+          <ul class="filter-list">
+
+            <li>
+              <a href="adventure.html"><button class="filter-btn">ADVENTURE</button></a>
+            </li>
+
+            <li>
+              <a href="action.html"><button class="filter-btn">ACTION</button></a>
+            </li>
+
+            <li>
+              <a href="horror.html"><button class="filter-btn">HORROR</button></a>
+            </li>
+
+            <li>
+              <a href="comedy.html"><button class="filter-btn">COMEDY</button></a>
+            </li>
+
+          </ul>
+
+          <h2 class="h2 section-title">UPCOMING MOVIES</h2>
+
+          <ul class="movies-list">
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-1.png" alt="john wick 4">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">John Wick: Chapter 4</h3>
+                  </a>
+
+                  <time datetime="2022">04/05/2023</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">2K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT122M">122 min</time>
+                  </div>
+                
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>7.8</data>
+                  </div>
+                </div>
+
               </div>
-            </div>
+            </li>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>VIVO</h3>
-              <div class="time flex">
-                <span>SHOWING 23 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-2.png" alt="guardian of the galaxy ">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Guardians of the Galaxy Vol. 3</h3>
+                  </a>
+
+                  <time datetime="2022">05/05/2023</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT104M">104 min</time>
+                  </div>
+                  
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>5.9</data>
+                  </div>
+                </div>
+
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/doctor.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+            </li>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>DOCTOR</h3>
-              <div class="time flex">
-                <span>SHOWING 24 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/infinite.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+            <li>
+              <div class="movie-card">
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>INFINITE</h3>
-              <div class="time flex">
-                <span>SHOWING 25 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/nobody.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-3.png" alt="mission Impossible Reckoning,part one">
+                  </figure>
+                </a>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>NOBODY</h3>
-              <div class="time flex">
-                <span>SHOWING 27 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/choosedie.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Mission: Impossible - Dead Reckoning, Part One</h3>
+                  </a>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>CHOOSE OR DIE</h3>
-              <div class="time flex">
-                <span>SHOWING 29 MAY 2022</span>
-                <i class="fas fa-circle"></i>
-                <span>20:00HRS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-  </section>
+                  <time datetime="2022">26/05/2023</time>
+                </div>
 
-  <section class="popular mtop" id="category">
-    <div class="container ">
-      <div class="heading flex1">
-        <h2>CATEGORY</h2>
-      </div>
+                <div class="card-meta">
+                  <div class="badge badge-outline">4K</div>
 
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p1.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
 
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <div class="time flex">
-                <a href="action.html">ACTION</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p2.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <div class="time flex">
-                <a href="adventure.html">ADVENTURE</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p3.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <div class="time flex">
-                <a href="horror.html">HORROR</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p4.jfif" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <div class="time flex">
-                <a href="comedy.html">COMEDY</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Owl Carousel -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
-  <!-- Owl Carousel -->
-
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: true,
-      dots: false,
-      responsive: {
-        411: {
-          items: 1
-        },
-        768: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    })
-  </script>
-
-<section class="popular mtop" id="upcoming">
-    <div class="container ">
-      <div class="heading flex1">
-        <h2>NEW RELEASES</h2>
-      </div>
-
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p7.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>My Generation</h3>
-              <div class="time flex">
-                <span>2023 AUG</span>
-                <i class="fas fa-circle"></i>
-                <a>Action</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p6.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>Machine War</h3>
-              <div class="time flex">
-                <span>2022 JULY</span>
-                <i class="fas fa-circle"></i>
-                <a>Action</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p5.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>Fight for Life</h3>
-              <div class="time flex">
-                <span>2022 SEPT</span>
-                <i class="fas fa-circle"></i>
-                <a>Action</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p4.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>The Warrior Life</h3>
-              <div class="time flex">
-                <span>2023 JAN</span>
-                <i class="fas fa-circle"></i>
-                <a>Action</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="box">
-            <div class="imgBox">
-              <img src="image/p3.jpg" alt="">
-              <div class="icon">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-share-alt"></i>
-                <i class="fas fa-plus"></i>
-              </div>
-            </div>
-
-            <div class="content">
-              <i id="palybtn" class="fas fa-play"></i>
-            </div>
-            <div class="text">
-              <h3>Skull Of Myths </h3>
-              <div class="time flex">
-                <span>2022 JUNE</span>
-                <i class="fas fa-circle"></i>
-                <a>Action</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- paxi mate ko lai aata hai-->
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: true,
-      dots: false,
-      responsive: {
-        414: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    })
-  </script>
-
-
-
-  <footer>
-   <!-- contact1 -->
-    <div class=" section-gap" id="contact"></div>
-      <div class="wrapper">
-        <h4 class="sub-title text-center">Find us</h4>
-        <h3 class="global-title text-center">Contact us</h3>
-        <div class="d-grid contact-view">
-          <div class="cont-details">
-
-
-            <div class="cont-top">
-
-              <div class="cont-left text-center">
-                <span class="fa fa-phone text-primary"></span>
-              </div>
-
-              <div class="cont-right">
-                <h6>Call Us</h6>
-                <p><a href="#">+267 71234567</a></p>
-              </div>
-
-            </div>
-
-
-            <div class="cont-top margin-up">
-
-              <div class="cont-left text-center">
-                <span class="fa fa-envelope-o text-primary"></span>
-              </div>
-              <div class="cont-right">
-                <h6>Email Us</h6>
-                <p><a href="mailto:example@mail.com" class="mail">moviesbrain@gmail.com</a></p>
-              </div>
+                    <time datetime="PT106M">106 min</time>
+                  </div>
+                
               
-            </div>
 
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
 
-            <div class="cont-top margin-up">
-              <div class="cont-left text-center">
-                <span class="fa fa-map-marker text-primary"></span>
+                    <data>7.0</data>
+                  </div>
+                </div>
+
               </div>
-              <div class="cont-right">
-                <h6>Address</h6>
-                <p>BRAIN STREET 2451</p>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-4.png" alt="mad max Wasteland">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Mad Max: The Wasteland</h3>
+                  </a>
+
+                  <time datetime="2021">27/05/2023</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">4K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT115M">115 min</time>
+                  </div>
+                  
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>7.7</data>
+                  </div>
+                </div>
+
               </div>
-            </div>
-          </div>
+            </li>
 
+            <li>
+              <div class="movie-card">
 
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-5.png" alt="turning red">
+                  </figure>
+                </a>
 
-          <div class="map-content" id="feedback">
-            <form action="#" method="post">
-              <div class="twice-two">
-                <input type="text" class="form-control" name="w3lName" id="w3lName" placeholder="Name" required="">
-                <input type="email" class="form-control" name="w3lSender" id="w3lSender" placeholder="Email"
-                  required="">
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Turning Red</h3>
+                  </a>
+
+                  <time datetime="2022">28/05/2023</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">4K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT176M">176 min</time>
+                  </div>
+                  
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>7.9</data>
+                  </div>
+                </div>
+
               </div>
+            </li>
 
-              <div class="twice">
-                <input type="text" class="form-control" name="w3lSubject" id="w3lSubject" placeholder="Subject"
-                  required="">
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-6.png" alt="Uncharted movie poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Uncharted</h3>
+                  </a>
+
+                  <time datetime="2022">01/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT116M">116 min</time>
+                  </div>
+                  
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>7.0</data>
+                  </div>
+                </div>
+
               </div>
+            </li>
 
-              <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message"
-                required=""></textarea>
-              <button type="submit" class="btn btn-contact">Send Message</button>
-            </form>
-          </div>
+            <li>
+              <div class="movie-card">
 
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-7.png" alt="Death on the Nile movie poster">
+                  </figure>
+                </a>
 
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">Death on the Nile</h3>
+                  </a>
+
+                  <time datetime="2022">01/05/2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">2K</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT127M">127 min</time>
+                  </div>
+                  
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>6.5</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="#">
+                  <figure class="card-banner">
+                    <img src="./assets/images/movie-8.png" alt="The King's Man movie poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="#">
+                    <h3 class="card-title">The King's Man</h3>
+                  </a>
+
+                  <time datetime="2021">2021</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT131M">131 min</time>
+                  </div>
+                  
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>7.0</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
 
         </div>
+      </section>
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" id="feedback">
+        <div class="babusi">
+    <div class="content">
+      <div class="image-box">
+       <img src="../images/hero-bg.jpg" alt=""> 
       </div>
-    
-  <!-- /contact1 -->
+    <form action="#">
+      <div class="topic">Send us a message</div>
+      <div class="input-box">
+        <input type="text" required>
+        <label>Enter your name</label>
+      </div>
+      <div class="input-box">
+        <input type="text" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="message-box">
+        <input type="text" name="">
+        <label>Enter your message</label>
+      </div>
+      <div class="input-box">
+        <input type="submit" value="Send Message">
+      </div>
+    </form>
+  </div>
+  </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" id="contact">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="./icon.jfif" alt="logo">
+          </a>
+
+          <ul class="footer-list">
+
+            <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#movie" class="navbar-link">MovieS</a>
+          </li>
+
+          <li>
+            <a href="#category" class="navbar-link">CATEGORY</a>
+          </li>
+
+          <li>
+            <a href="#upcoming" class="navbar-link">UPCOMING</a>
+          </li>
+
+          <li>
+            <a href="#feedback" class="navbar-link">FEEDBACK</a>
+          </li>
+
+           <li>
+            <a href="#contact" class="navbar-link">CONTACT</a>
+          </li>
+
+
+          </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quicklink-wrapper" id="contact">
+
+          <ul class="quicklink-list">
+
+            <li>
+              <a href="#" class="quicklink-link">Faq</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Terms of use</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Privacy</a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; BABUSI
+        </p>
+
+        <img src="./assets/images/footer-bottom-img.png" alt="Online banking companies logo" class="footer-bottom-img">
+
+      </div>
+    </div>
 
   </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
